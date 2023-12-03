@@ -46,4 +46,9 @@ class market:
         self.orders.append(order)
 
     def process_orders(self):
-        
+        for s in self.sell_orders:
+            for b in self.buy_orders:
+                if s.price==b.price:
+                    pass
+                    # complete the order
+

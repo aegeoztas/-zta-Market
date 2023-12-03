@@ -31,8 +31,19 @@ class order:
 class market:
     def __init__(self):
         self.traders
-        self.orders
+        self.sell_orders
+        self.buy_orders
         self.securites
-    def add_securities(self,sec):
+    def add_securitie(self,sec):
         self.securities.append(sec)
-        self.
+    def add_trader(self,trade):
+        self.traders.append(trade)
+    def add_order(self,order):
+        if order.type == 'sell':
+            self.sell_orders.append(order)
+        elif order.type == 'buy':
+            self.buy_orders.append(order)
+        self.orders.append(order)
+
+    def process_orders(self):
+        
